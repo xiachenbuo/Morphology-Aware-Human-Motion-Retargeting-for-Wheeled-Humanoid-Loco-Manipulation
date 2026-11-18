@@ -3,19 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Morphology-Aware Human Motion Retargeting for Wheeled-Humanoid Loco-Manipulation">
-  <title>Morphology-Aware Human Motion Retargeting</title>
+  <meta name="description" content="Video demonstrations for Morphology-Aware Human Motion Retargeting for Wheeled-Humanoid Loco-Manipulation.">
+  <meta property="og:title" content="Morphology-Aware Human Motion Retargeting">
+  <meta property="og:description" content="TAMR and T-FeaCG+PPO video demonstrations.">
+  <title>Motion Retargeting Video Demonstrations</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="topbar"><div class="brand">MA-HMR</div><nav><a href="#overview">Overview</a><a href="#videos">Videos</a><a href="#contributions">Contributions</a><a href="#citation">Citation</a></nav><a class="github" href="https://github.com/xiachenbuo/Morphology-Aware-Human-Motion-Retargeting-for-Wheeled-Humanoid-Loco-Manipulation" target="_blank" rel="noreferrer">GitHub ↗</a></header>
-  <main>
-    <section class="hero wrap"><p class="eyebrow">RESEARCH PROJECT</p><h1>Morphology-Aware Human Motion Retargeting for Wheeled-Humanoid Loco-Manipulation</h1><p class="authors">Xia Chenbo · Chao Ye · Xiang Li · Yue Hao · Qi Chen</p><p class="affiliation">Harbin Institute of Technology</p><a class="button" href="https://arxiv.org/abs/2609.11357" target="_blank" rel="noreferrer">arXiv: 2609.11357 ↗</a></section>
-    <section id="overview" class="overview wrap"><p class="eyebrow">OVERVIEW</p><div class="overview-grid"><h2>Retargeting human motion to a wheeled humanoid robot.</h2><div class="body-copy"><p>This is a reinforcement learning repository for the R1 Pro humanoid robot mounted on a wheeled chassis. The project currently contains three major components.</p><p>Our motion retargeting algorithm, modified from GMR, transfers human movement to R1 Pro. It accepts SMPL-X and BVH data, supports the PN3 full-body joint inertial motion-capture interface from Noitom, and enables video-based retargeting through GVHMR.</p><p>Our reinforcement-learning pipeline is based on a BeyondMimic modification. With one RTX 3090 GPU and a redirected dataset of 5,000 motion clips, training for 90,000 iterations in 4,096 parallel environments achieves strong generalization.</p><p>Following an OmniH2O-inspired Teacher–Student DAgger architecture, we use the reinforcement-learning policy as the Teacher. The Student is trained from the elbow and chassis position and orientation of R1 Pro, enabling connection to VR teleoperation.</p></div></div></section>
-    <section id="videos" class="videos"><div class="wrap"><p class="eyebrow">QUALITATIVE RESULTS</p><h2>Teacher inference after retargeting and reinforcement learning</h2><p class="video-note">The videos below show the Teacher policy running on redirected human motions.</p><div id="video-grid" class="video-grid"></div></div></section>
-    <section id="contributions" class="contributions wrap"><p class="eyebrow">CONTRIBUTIONS</p><h2>Three practical contributions</h2><div class="contribution-grid"><article><span>01</span><h3>Omnidirectional chassis planning</h3><p>We develop a trajectory planner and a wheel-speed and steering generator for the three-wheel omnidirectional chassis of R1 Pro.</p></article><article><span>02</span><h3>Under-actuated motion mapping</h3><p>We design mapping-switching and retargeting methods for robots with under-actuated joints, together with smooth switching logic for walking, squatting, and bending.</p></article><article><span>03</span><h3>Real-time open-source pipeline</h3><p>We open-source a complete communication solution and implement real-time retargeting and reinforcement-learning control across the simulation pipeline.</p></article></div></section>
-    <section id="citation" class="citation wrap"><p class="eyebrow">PAPER</p><a class="arxiv-number" href="https://arxiv.org/abs/2609.11357" target="_blank" rel="noreferrer">arXiv: 2609.11357 ↗</a></section>
+  <header class="topbar">
+    <a class="brand" href="#top">MA-HMR</a>
+    <nav aria-label="Page navigation">
+      <a href="#tamr">TAMR</a>
+      <a href="#tfeacg">T-FeaCG + PPO</a>
+    </nav>
+    <a class="github" href="https://github.com/xiachenbuo/Morphology-Aware-Human-Motion-Retargeting-for-Wheeled-Humanoid-Loco-Manipulation" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <p class="eyebrow">VIDEO DEMONSTRATIONS</p>
+      <h1>Morphology-Aware Human Motion Retargeting for Wheeled-Humanoid Loco-Manipulation</h1>
+      <p class="authors">Chenbo Xia, Xiang Li, Bohan Wu, Yue Hao, Hao Zhang, and Chao Ye</p>
+      <p class="affiliation">Harbin Institute of Technology</p>
+      <p class="lead">Qualitative results for topology-adaptive retargeting and temporal feasibility-aware base control.</p>
+    </section>
+
+    <section id="tamr" class="results-section wrap">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">1 / TAMR</p>
+          <h2>Retargeted results</h2>
+        </div>
+        <p class="section-note">Twenty motion sequences after topology-adaptive motion retargeting.</p>
+      </div>
+      <div id="tamr-grid" class="video-grid" aria-label="TAMR retargeted results"></div>
+    </section>
+
+    <section id="tfeacg" class="results-section tfeacg-section">
+      <div class="wrap">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">2 / T-FEACG + PPO</p>
+            <h2>Temporal feasibility-aware control</h2>
+          </div>
+          <p class="section-note">Comparison of the PPO policy with and without T-FeaCG.</p>
+        </div>
+
+        <div class="subsection">
+          <h3><span>2.1</span> With T-FeaCG</h3>
+          <div id="with-tfeacg-grid" class="video-grid five-column" aria-label="Results with T-FeaCG"></div>
+        </div>
+
+        <div class="subsection">
+          <h3><span>2.2</span> Without T-FeaCG</h3>
+          <div id="without-tfeacg-grid" class="video-grid five-column" aria-label="Results without T-FeaCG"></div>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer class="wrap footer">© 2026 Xia Chenbo · <a href="https://github.com/xiachenbuo/Morphology-Aware-Human-Motion-Retargeting-for-Wheeled-Humanoid-Loco-Manipulation" target="_blank" rel="noreferrer">Open source on GitHub</a></footer><script src="script.js?v=20261017-h264"></script>
+
+  <footer class="footer wrap">
+    <span>MA-HMR video demonstrations</span>
+    <a href="https://github.com/xiachenbuo/Morphology-Aware-Human-Motion-Retargeting-for-Wheeled-Humanoid-Loco-Manipulation" target="_blank" rel="noopener noreferrer">Open source on GitHub ↗</a>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
