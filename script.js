@@ -14,7 +14,10 @@ for (const group of groups) {
     video.preload = 'metadata';
     video.playsInline = true;
     video.setAttribute('aria-label', group.label);
-    video.src = `assets/videos/${group.directory}/${encodeURIComponent(file)}`;
+    const source = document.createElement('source');
+    source.src = `assets/videos/${group.directory}/${encodeURIComponent(file)}`;
+    source.type = 'video/mp4';
+    video.appendChild(source);
     card.appendChild(video);
     grid.appendChild(card);
   }
