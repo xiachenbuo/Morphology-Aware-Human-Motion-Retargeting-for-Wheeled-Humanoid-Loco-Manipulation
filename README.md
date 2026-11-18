@@ -1,4 +1,4 @@
-# Motion Retargeting Video Demonstrations
+# MMR Page
 
 This GitHub Pages site presents the video results for *Morphology-Aware Human Motion Retargeting for Wheeled-Humanoid Loco-Manipulation*.
 

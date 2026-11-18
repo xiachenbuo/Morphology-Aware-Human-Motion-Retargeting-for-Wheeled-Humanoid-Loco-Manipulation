@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Video demonstrations for Morphology-Aware Human Motion Retargeting for Wheeled-Humanoid Loco-Manipulation.">
-  <meta property="og:title" content="Morphology-Aware Human Motion Retargeting">
+  <meta property="og:title" content="MMR Page">
   <meta property="og:description" content="TAMR and T-FeaCG+PPO video demonstrations.">
-  <title>Motion Retargeting Video Demonstrations</title>
+  <title>MMR Page | Motion Retargeting Video Demonstrations</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="#top">MA-HMR</a>
+    <a class="brand" href="#top">MMR</a>
     <nav aria-label="Page navigation">
       <a href="#tamr">TAMR</a>
       <a href="#tfeacg">T-FeaCG + PPO</a>
@@ -26,6 +26,13 @@
       <p class="authors">Chenbo Xia, Xiang Li, Bohan Wu, Yue Hao, Hao Zhang, and Chao Ye</p>
       <p class="affiliation">Harbin Institute of Technology</p>
       <p class="lead">Qualitative results for topology-adaptive retargeting and temporal feasibility-aware base control.</p>
+    </section>
+
+    <section class="figure-section wrap" aria-labelledby="pipeline-caption">
+      <figure class="pipeline-figure">
+        <img src="assets/figures/fig1_workflow.svg" alt="Whole-body teleoperation pipeline showing TAMR, T-FeaCG, and Teacher--Student DAgger." loading="lazy">
+        <figcaption id="pipeline-caption"><strong>Figure 1.</strong> Whole-body teleoperation pipeline. TAMR performs retargeting, T-FeaCG adjusts base commands, and Teacher--Student DAgger performs policy training.</figcaption>
+      </figure>
     </section>
 
     <section id="tamr" class="results-section wrap">
@@ -63,7 +70,7 @@
   </main>
 
   <footer class="footer wrap">
-    <span>MA-HMR video demonstrations</span>
+    <span>MMR video demonstrations</span>
     <a href="https://github.com/xiachenbuo/Morphology-Aware-Human-Motion-Retargeting-for-Wheeled-Humanoid-Loco-Manipulation" target="_blank" rel="noopener noreferrer">Open source on GitHub ↗</a>
   </footer>
   <script src="script.js"></script>
